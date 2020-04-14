@@ -1,3 +1,25 @@
+
+// //生成限定第几页数据
+// const generateDataPage=(limited=10 , offset=0)=>{
+//   return Mock.mock({
+//     code: 200,      
+//     data:{
+//       currentPage: (offset / limited) + 1 , //计算第几页公式
+//       isLastPage:false,//是否最后一页，否
+//       total:1000, //这里写多少可以，实际开发中以后端为主
+//     //特别注意这里 [`list|${limited}`]模板字符串，变量key用括号包起来
+//         [`list|${limited}`]: [
+//           {
+//             "id": "@id",
+//             "img": "@img(262x262,@color)",
+//             "title": "@ctitle(8,12)",
+//             "price|1-1000": 20,
+//             "status": "@ctitle(2)"
+//           }
+//         ]   
+//     }
+//   }) 
+//  }
 module.exports = {
   "total": 1,
   "totalPage": 1,
@@ -10,16 +32,4 @@ module.exports = {
     telephone: /^1[0-9]{10}$/,
     cuName: '@cname'
   }]
-  // data: {
-    // name: "@cname",
-    // mobile: /^1[385]\d{9}$/,
-    // "age|18-50": 1,
-    // "orders|5-10": [
-    //   {
-    //     id: "@id",
-    //     from: "@county(true)",
-    //     to: "@county(true)"
-    //   }
-    // ]
-  // }
 }
